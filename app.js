@@ -16,6 +16,6 @@ app.get("/", function (request, response) {
     response.send({status: 400, result: {message: "Try api: /csv/to/json?q=link_for_csv"}});
 })
 
-app.listen(port, function () {
-    console.log("server is listening on port : " + port);
+app.listen(process.env.PORT || port, function () {
+    console.log("server is listening on port : " + process.env.PORT || port);
 })
